@@ -1,0 +1,136 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0034CC;
+    font-family: 'Montserrat', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  input, .form-select {
+      margin-bottom: 10px;
+      height: 50px;
+  }
+
+  .wrapper {
+      padding: 0;
+    margin: 0;
+      width: 100%;
+      height:100%; 
+  }
+
+  .genderIcon {
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+  }
+
+.divCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}  
+
+.h2MainHeader {
+  margin-bottom: 20px;
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: 30px;
+  }
+
+  .settingsHeader {
+    background-color:#E5E9FA;
+    height: 50px;
+    color: #0034CC;
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .navbar {
+      padding: 0;
+      margin-top: 0;
+      background-color: #0034CC;
+      align-items: center;
+  }
+
+  .wave {
+      margin-right: 0;
+      /* align-items: center; */
+      width: 660px;
+      height: 80;
+      
+  }
+
+  .logoLg , .logoSm{
+      margin-bottom: 20px;
+      color:white;
+      font-family: 'Akaya Kanadaka', cursive;
+      font-size: 75px;
+      text-align: center;
+  }
+
+  .logoSm {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 1em;
+    text-align: left;
+    width: auto;
+    white-space: nowrap;
+}
+
+  .loginContainer {
+    padding: 40px;
+    width: 400px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0 0px 20px -6px rgb(190, 190, 190);
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+
+  .btn-primary, .btn-secondary, .fixed-button {
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 24px;
+    border:none;
+    width: 100%;
+    background-color:#FF9400 ;
+    border-radius:8px;
+    padding-top: 8px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    margin-top: 14px;
+  }
+
+  .btn-secondary {
+    border:1px solid blue;
+    color: #0034CC;
+    background-color:white ;
+  }
+
+  .fixed-button{ 
+
+    border-radius:0px;
+    padding-top: 8px;
+    position: fixed; 
+    bottom: 0; 
+    left: 0px;
+
+    }
+    /* .fixed-header{ 
+
+      border-radius:0px;
+      padding-top: 8px;
+      position: fixed; 
+      top: 0; 
+      left: 0px;
+  
+      } */
