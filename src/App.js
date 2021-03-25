@@ -1,13 +1,25 @@
 import React from "react";
-import Header from "./components/Header";
-import Login from "./pages/Login";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import routes from './routes/routes';
 
 function App() {
   return (
+
     <div>
-      <Header />
-      <Login />
+      <Router>
+        <Switch>
+          {routes.map((route, idx) => {
+            return (
+              <Route
+                key={idx}
+                path={route.path}
+                exact={route.exact}
+                render={route.component}
+              />
+            )
+          })}
+        </Switch>
+      </Router>
     </div>
   );
 }

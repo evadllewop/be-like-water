@@ -14,10 +14,10 @@ body {
   }
 
   .wrapper {
-      padding: 0;
+    padding: 0;
     margin: 0;
-      width: 100%;
-      height:100%; 
+    width: 100%;
+    height:100%; 
   }
 
   .genderIcon {
@@ -60,18 +60,24 @@ body {
   }
 
   .wave {
+    padding: 0;
+    margin-top: 0;
       margin-right: 0;
-      /* align-items: center; */
-      width: 660px;
-      height: 80;
+      width: 100%;
+      /* height: 80; */
       
+  }
+
+  .waterDrop {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .logoLg , .logoSm{
       margin-bottom: 20px;
       color:white;
       font-family: 'Akaya Kanadaka', cursive;
-      font-size: 75px;
+      font-size: 60px;
       text-align: center;
   }
 
@@ -83,6 +89,7 @@ body {
     text-align: left;
     width: auto;
     white-space: nowrap;
+    float: right;
 }
 
   .loginContainer {
@@ -125,12 +132,9 @@ body {
     left: 0px;
 
     }
-    /* .fixed-header{ 
-
-      border-radius:0px;
-      padding-top: 8px;
+    .fixed-header{ 
       position: fixed; 
       top: 0; 
-      left: 0px;
+      right: 0px;
   
-      } */
+      }
