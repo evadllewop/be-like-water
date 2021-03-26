@@ -100,7 +100,7 @@ body {
     margin: auto;
     box-shadow: 0 0px 20px -6px rgb(190, 190, 190);
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .btn-primary, .btn-secondary, .fixed-button {
@@ -117,24 +117,33 @@ body {
     margin-top: 14px;
   }
 
+  .btn-primary:hover {
+    background-color: white;
+    color: #FF9400;
+    border: 1px solid #FF9400;
+  }
+
   .btn-secondary {
     border:1px solid blue;
     color: #0034CC;
     background-color:white ;
   }
 
-  .fixed-button{ 
+  .btn-secondary:hover {
+    background-color: blue;
+    color: white;
+  }
 
-    border-radius:0px;
+  .fixed-button{ 
+    width: 400px;
     padding-top: 8px;
-    position: fixed; 
+    margin-bottom: 30px;
+    /* position: fixed;  */
     bottom: 0; 
     left: 0px;
-
     }
     .fixed-header{ 
       position: fixed; 
       top: 0; 
       right: 0px;
-  
       }

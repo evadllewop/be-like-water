@@ -20,6 +20,8 @@ function Drink() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div align="center">
                 <FixedButton label="settings" path="/settings" />
             </div>
         </>

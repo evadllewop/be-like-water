@@ -86,6 +86,9 @@ function Settings() {
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div align="center">
                 <FixedButton label="next" path="/drink" />
             </div>
         </>
