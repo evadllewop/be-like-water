@@ -18,6 +18,7 @@ class Dashboard extends Component {
     return (
       <>
         <Header />
+
         <div className="loginContainer">
           <div className="row">
             <div className="col-md-12">
@@ -30,6 +31,21 @@ class Dashboard extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="row" align="center">
+          <div className="col">
+            <button
+              style={{
+                width: "400px",
+                borderRadius: "8px",
+                // letterSpacing: "1.5px",
+                marginBottom: "40px"
+              }}
+              onClick={this.onLogoutClick}
+              className="btn-secondary"
+            >
+              logout
+              </button></div>
         </div>
       </>
     );
