@@ -17,7 +17,7 @@ const User = require("../../models/User");
 // @access Public
 router.get("/test", (req, res) => {
   res.send("test")
-}) 
+})
 
 router.post("/register", (req, res) => {
   // Form validation
@@ -38,6 +38,7 @@ router.post("/register", (req, res) => {
         email: req.body.email,
         password: req.body.password
       });
+
 
       // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {

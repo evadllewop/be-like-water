@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 
-function FixedButton(props) {
+function FixedButton(props) { // props.onClick
 
     const handleClick = () => {
         // serves as a redirect
@@ -9,7 +9,7 @@ function FixedButton(props) {
     }
 
     return (
-        <button className="btn-primary fixed-button" onClick={handleClick}>{props.label}</button>
+        <button className="btn-primary fixed-button" onClick={props.onClick ? props.onClick : handleClick}>{props.label}</button>
     )
 }
 export default withRouter(FixedButton);
