@@ -14,6 +14,8 @@ class Drink extends Component {
         this.props.logoutUser();
     };
 
+    state = {};
+
     // /api/water/hasan
     // /api/water/dave
     // /api/water/6547373
@@ -22,7 +24,8 @@ class Drink extends Component {
         const id = this.props.match.params.id;
         axios.get(`/api/water/${id}`)
             .then((res) => {
-                console.log(res);
+                this.setState(res.data);
+
             })
 
 
@@ -30,7 +33,6 @@ class Drink extends Component {
 
     render() {
         const { user } = this.props.auth;
-        console.log(this.props.match.params.id);
         return (
             <>
                 <Header />
@@ -38,7 +40,7 @@ class Drink extends Component {
                     <div className="row" align="center">
                         <div className="col-md-12">
                             <img src={WaterDrop} className="waterDrop" />
-
+                            <div style={{ color: 'black' }}>{this.state.weight}</div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <button className="btn-secondary" type="submit">drink!</button>
@@ -65,6 +67,12 @@ class Drink extends Component {
                             logout
               </button></div>
                 </div>
+                {/* <section>
+                    <div class="wave wave1"></div>
+                    <div class="wave wave2"></div>
+                    <div class="wave wave3"></div>
+                    <div class="wave wave4"></div>
+                </section> */}
             </>
 
         )

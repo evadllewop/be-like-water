@@ -22,11 +22,11 @@ class Dashboard extends Component {
         <div className="loginContainer">
           <div className="row">
             <div className="col-md-12">
-              <div className="col-md-12">
+              <div className="col-md-12" align="center">
                 <h4 className="h2MainHeader">
                   <b>Hey there,</b> {user.name.split(" ")[0]}
                 </h4>
-                <p>Drinking water is a very important thing. This app will help you...blah blah blah.</p>
+                <p align="center">So you went out drinking huh? Unless you wanna feel like a bag of dried crap tomorrow, you might want to drink some water. This app will help you.</p>
                 <ButtonHydrate label="let's get hydrated" path='/settings' />
               </div>
             </div>
@@ -47,6 +47,12 @@ class Dashboard extends Component {
               logout
               </button></div>
         </div>
+        <section>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave4"></div>
+        </section>
       </>
     );
   }

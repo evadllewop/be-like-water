@@ -3,16 +3,94 @@ body {
     margin: 0;
     background-color: #0034CC;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    /* color: white; */
     font-size: 14px;
+    /* min-height: 20vh; */
+    /* min-height: -webkit-fill-available; */
   }
-  * {
+/* 
+  html {
+    height: -webkit-fill-available;
+  } */
+  /* * {
     box-sizing: border-box;
-  }
+  } */
 
   input, .form-select {
       margin-bottom: 10px;
       height: 50px;
+  }
+  section {
+    /* position: relative; */
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+  }
+
+  section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./images/wave.png);
+    background-size: 1000px 100px;
+  }
+  section .wave.wave1 {
+
+    animation: animate 10s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .wave.wave2 {
+
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .wave.wave3 {
+
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+  }
+  section .wave.wave4 {
+
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes animate {
+
+    0%
+    {
+      background-position-x: 0;
+      /* background-position-y: -200; */
+    }
+    100%
+    {
+      background-position-x: 1000px;
+      /* background-position-y: 100px; */
+    }
+  }
+  @keyframes animate2 {
+
+    0%
+    {
+      background-position-x: 0;
+    }
+    100%
+    {
+      background-position-x: -1000px;
+    }
   }
 
   .wrapper {
@@ -41,7 +119,7 @@ body {
   font-size: 30px;
   }
 
-  .settingsHeader {
+.settingsHeader {
     background-color:#E5E9FA;
     height: 50px;
     color: #0034CC;
@@ -54,26 +132,26 @@ body {
     padding: 10px;
   }
 
-  .navbar {
+.navbar {
       padding: 0;
       margin-top: 0;
       background-color: #0034CC;
       align-items: center;
   }
-  .txtWrapper {
+.txtWrapper {
     margin: auto;
     width: 400px;
     padding: 20px;
     text-align: center;
+    color: white;
   }
 
-  .wave {
+.wave {
     padding: 0;
     margin-top: 0;
       margin-right: 0;
       width: 100%;
       /* height: 80; */
-      
   }
 
   .waterDrop {
@@ -87,6 +165,7 @@ body {
       font-family: 'Akaya Kanadaka', cursive;
       font-size: 60px;
       text-align: center;
+      margin-bottom: 10px;
   }
 
   .logoSm {
@@ -94,6 +173,8 @@ body {
     /* margin-top: 40px; */
     color: deepskyblue;
     margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 2em;
     text-align: center;
     width: auto;

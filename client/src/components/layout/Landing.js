@@ -10,7 +10,7 @@ class Landing extends Component {
       <>
         <Header />
         <div className="row">
-          <div className="logoSm">tagline goes here</div>
+          <div className="logoSm">stay hydrated, stupid</div>
         </div>
         <div className="row">
           <div className="txtWrapper">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
@@ -26,6 +26,12 @@ class Landing extends Component {
             </div>
           </div>
         </div>
+        <section>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave4"></div>
+        </section>
       </>
     );
   }

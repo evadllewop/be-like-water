@@ -8,7 +8,7 @@ function Header() {
             <div className="row">
                 <div className="d-flex flex-row-reverse bd-highlight"><img className="wave" src={Wave} alt="" />
                 </div>
-                <div className="col logoLg">be like water</div>
+                <div className="col logoLg">beer likes water</div>
             </div>
         </div>
     )
