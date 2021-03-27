@@ -2,7 +2,6 @@
   "name": "mern-auth",
   "version": "1.0.0",
   "description": "Mern Auth Example",
-  "proxy": "http://localhost:5000/",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
