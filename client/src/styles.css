@@ -3,6 +3,8 @@ body {
     margin: 0;
     background-color: #0034CC;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 14px;
   }
   * {
     box-sizing: border-box;
@@ -58,6 +60,12 @@ body {
       background-color: #0034CC;
       align-items: center;
   }
+  .txtWrapper {
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
 
   .wave {
     padding: 0;
@@ -74,7 +82,7 @@ body {
   }
 
   .logoLg , .logoSm{
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
       color:white;
       font-family: 'Akaya Kanadaka', cursive;
       font-size: 60px;
@@ -82,11 +90,12 @@ body {
   }
 
   .logoSm {
-    position: relative;
-    margin-top: 40px;
-    margin-left: 60px;
-    font-size: 1em;
-    text-align: left;
+    /* position: relative; */
+    /* margin-top: 40px; */
+    color: deepskyblue;
+    margin: auto;
+    font-size: 2em;
+    text-align: center;
     width: auto;
     white-space: nowrap;
     float: right;

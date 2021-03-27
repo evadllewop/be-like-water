@@ -9,6 +9,13 @@ class Landing extends Component {
     return (
       <>
         <Header />
+        <div className="row">
+          <div className="logoSm">tagline goes here</div>
+        </div>
+        <div className="row">
+          <div className="txtWrapper">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
+          egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
         <div className="loginContainer">
           <div className="row">
             <div className="col-md-12">

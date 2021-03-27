@@ -7,13 +7,22 @@ import { withRouter } from 'react-router-dom';
 import Header from "../components/layout/Header";
 import maleImage from '../images/blw_settings_male.png';
 import femaleImage from '../images/blw_settings_female.png';
+import axios from "axios";
 
+const selectedStyle = { borderWidth: "1px", borderStyle: "solid", borderColor: "black" };
 
 class Settings extends Component {
     onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser();
     };
+
+    state = {
+        weight: "",
+        goal: "",
+        gender: ""
+    }
+
     render() {
         const { user } = this.props.auth;
 
@@ -26,8 +35,8 @@ class Settings extends Component {
                             <h2 className="settingsHeader">gender</h2>
                             <div className="row" align="center">
                                 <div className="col-md-12">
-                                    <img src={maleImage} alt={maleImage} className="genderIcon" />
-                                    <img src={femaleImage} alt={femaleImage} className="genderIcon" />
+                                    <img src={maleImage} style={this.state.gender === "male" ? selectedStyle : {}} onClick={() => { this.setState({ gender: "male" }) }} alt={maleImage} className="genderIcon" />
+                                    <img src={femaleImage} style={this.state.gender === "female" ? selectedStyle : {}} onClick={() => { this.setState({ gender: "female" }) }} alt={femaleImage} className="genderIcon" />
 
                                     <div className="row">
                                         <div className="col-md-12">
@@ -35,7 +44,7 @@ class Settings extends Component {
 
                                             <form className="login">
                                                 <div className="form-group">
-                                                    <input type="input" className="form-control" id="weight-input"
+                                                    <input type="input" className="form-control" onChange={(e) => { this.setState({ weight: e.target.value }) }} value={this.state.weight} id="weight-input"
                                                         placeholder="Enter your weight" />
                                                 </div>
                                                 <div className="row">
@@ -44,46 +53,10 @@ class Settings extends Component {
 
                                                         <form className="login">
                                                             <div className="form-group">
-                                                                <input type="input" className="form-control" id="goal-input"
+                                                                <input type="input" className="form-control" onChange={(e) => { this.setState({ goal: e.target.value }) }} value={this.state.goal} id="goal-input"
                                                                     placeholder="Enter daily goal (ml)" />
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-12">
-                                                                    <h2 className="settingsHeader">schedule</h2>
-                                                                    <div className="row g-3">
-                                                                        <div className="col">
-                                                                            <form className="login">
-                                                                                <select className="form-select"
-                                                                                    aria-label="Default select example">
-                                                                                    <option selected>Wake Time
-                                                                            </option>
-                                                                                    <option value="1">5:00am</option>
-                                                                                    <option value="2">6:00am</option>
-                                                                                    <option value="3">7:00am</option>
-                                                                                    <option value="4">8:00am</option>
-                                                                                    <option value="5">9:00am</option>
-                                                                                    <option value="6">10:00am</option>
-                                                                                </select>
-                                                                            </form>
-                                                                            <div>
-                                                                                <div className="col">
-                                                                                    <select className="form-select"
-                                                                                        aria-label="Default select example">
-                                                                                        <option selected>Sleep Time
-                                                                        </option>
-                                                                                        <option value="1">7:00pm</option>
-                                                                                        <option value="2">8:00pm</option>
-                                                                                        <option value="3">9:00pm</option>
-                                                                                        <option value="4">10:00pm</option>
-                                                                                        <option value="5">11:00pm</option>
-                                                                                        <option value="6">12:00am</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
                                                         </form>
                                                     </div>
                                                 </div>
@@ -97,7 +70,21 @@ class Settings extends Component {
 
                 </div>
                 <div align="center">
-                    <FixedButton label="next" path="/drink" />
+                    <FixedButton label="next" onClick={(e) => {
+                        const weightNum = parseInt(this.state.weight);
+                        const goalNum = parseInt(this.state.goal);
+                        const waterData = {
+                            gender: this.state.gender,
+                            weight: weightNum,
+                            goal: goalNum
+                        }
+                        axios
+                            .post("/api/water", waterData)
+                            .then(res => {
+                                console.log(res.data._id);
+                                this.props.history.push(`/drink/${res.data._id}`)
+                            })
+                    }} />
                 </div>
                 <div className="row" align="center">
                     <div className="col">

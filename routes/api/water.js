@@ -5,7 +5,8 @@ const router = express.Router();
 // const keys = require("../../config/keys");
 const passport = require("passport");
 const Water = require('../../models/water');
-router.post("/water", passport.authenticate("jwt", { session: false }), (req, res) => {
+
+router.post("/", passport.authenticate("jwt", { session: false }), (req, res) => {
     const { gender, weight, goal } = req.body;
     console.log(req.user.id);
 
