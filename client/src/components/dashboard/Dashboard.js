@@ -42,7 +42,7 @@ class Dashboard extends Component {
                 marginBottom: "40px"
               }}
               onClick={this.onLogoutClick}
-              className="btn-secondary"
+              className="btn-logout"
             >
               logout
               </button></div>
