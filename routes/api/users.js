@@ -59,6 +59,7 @@ router.post("/register", (req, res) => {
 // @desc Login user and return JWT token
 // @access Public
 router.post("/login", (req, res) => {
+  console.log(req.body.email)
   // Form validation
 
   const { errors, isValid } = validateLoginInput(req.body);
@@ -71,6 +72,7 @@ router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
+  console.log({ email })
   // Find user by email
   User.findOne({ email }).then(user => {
     // Check if user exists

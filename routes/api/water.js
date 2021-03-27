@@ -6,6 +6,7 @@ const router = express.Router();
 const passport = require("passport");
 const Water = require('../../models/water');
 
+// /api/water
 router.post("/", passport.authenticate("jwt", { session: false }), (req, res) => {
     const { gender, weight, goal } = req.body;
     console.log(req.user.id);
@@ -21,6 +22,7 @@ router.post("/", passport.authenticate("jwt", { session: false }), (req, res) =>
     newWater.save()
         .then(water => res.json(water))
 });
+
 router.get("/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
     const id = req.params.id;
     Water.findById(id)

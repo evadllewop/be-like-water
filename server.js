@@ -30,7 +30,7 @@ const db = require("./config/keys").mongoURI;
 //   .catch(err => console.log(err));
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/water',
+  process.env.MONGODB_URI || 'mongodb://localhost/waterchamps',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

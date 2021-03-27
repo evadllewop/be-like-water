@@ -6,14 +6,31 @@ import { withRouter } from 'react-router-dom';
 import FixedButton from "../components/FixedButton";
 import Header from "../components/layout/Header";
 import WaterDrop from '../images/waterDrop.png';
+import axios from 'axios';
 
 class Drink extends Component {
     onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser();
     };
+
+    // /api/water/hasan
+    // /api/water/dave
+    // /api/water/6547373
+
+    componentDidMount() {
+        const id = this.props.match.params.id;
+        axios.get(`/api/water/${id}`)
+            .then((res) => {
+                console.log(res);
+            })
+
+
+    }
+
     render() {
         const { user } = this.props.auth;
+        console.log(this.props.match.params.id);
         return (
             <>
                 <Header />
