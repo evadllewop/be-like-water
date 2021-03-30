@@ -9,7 +9,7 @@ import maleImage from '../images/blw_settings_male.png';
 import femaleImage from '../images/blw_settings_female.png';
 import axios from "axios";
 
-const selectedStyle = { borderWidth: "1px", borderStyle: "solid", borderColor: "black" };
+const selectedStyle = { borderWidth: "2px", borderStyle: "solid", borderColor: "#E5E9FA", borderRadius: '4px' };
 
 class Settings extends Component {
     onLogoutClick = e => {
@@ -30,6 +30,7 @@ class Settings extends Component {
             <>
                 <Header />
                 <div className="loginContainer">
+                    <p align="center">Below, you need to let us know just how drunk you're planning on getting. Your weight, gender and amount of beers are all necessary factors in determining how to get you back to your old self.</p>
                     <div className="row">
                         <div className="col-md-12">
                             <h2 className="settingsHeader">gender</h2>
@@ -49,12 +50,12 @@ class Settings extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-md-12">
-                                                        <h2 className="settingsHeader">daily goal</h2>
+                                                        <h2 className="settingsHeader">amount of beers</h2>
 
                                                         <form className="login">
                                                             <div className="form-group">
                                                                 <input type="input" className="form-control" onChange={(e) => { this.setState({ goal: e.target.value }) }} value={this.state.goal} id="goal-input"
-                                                                    placeholder="Enter daily goal (ml)" />
+                                                                    placeholder="Approximate # of beers (12 oz)" />
                                                             </div>
 
                                                         </form>
@@ -101,12 +102,6 @@ class Settings extends Component {
                             logout
               </button></div>
                 </div>
-                {/* <section>
-                    <div class="wave wave1"></div>
-                    <div class="wave wave2"></div>
-                    <div class="wave wave3"></div>
-                    <div class="wave wave4"></div>
-                </section> */}
             </>
 
         )

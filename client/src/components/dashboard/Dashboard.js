@@ -26,7 +26,9 @@ class Dashboard extends Component {
                 <h4 className="h2MainHeader">
                   <b>Hey there,</b> {user.name.split(" ")[0]}
                 </h4>
-                <p align="center">So you went out drinking huh? Unless you wanna feel like a bag of dried crap tomorrow, you might want to drink some water. This app will help you.</p>
+                <p align="center">So you think you wanna go out drinking huh? <br /><br />
+                Unless you wanna feel like a bag of dried crap tomorrow, you might want to drink some water. <br /><br />
+                This app will help you.</p>
                 <ButtonHydrate label="let's get hydrated" path='/settings' />
               </div>
             </div>

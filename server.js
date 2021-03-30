@@ -39,6 +39,7 @@ mongoose.connect(
   }
 );
 
+
 // Passport middleware
 app.use(passport.initialize());
 

@@ -6,7 +6,10 @@ import { withRouter } from 'react-router-dom';
 import FixedButton from "../components/FixedButton";
 import Header from "../components/layout/Header";
 import WaterDrop from '../images/waterDrop.png';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import './sparkle.css';
 import axios from 'axios';
+import BeerGlass from '../images/glass-of-beer.png';
 
 class Drink extends Component {
     onLogoutClick = e => {
@@ -38,12 +41,25 @@ class Drink extends Component {
                 <Header />
                 <div className="loginContainer">
                     <div className="row" align="center">
+                        <p align="center">Apparently, you're so drunk that you need to be reminded to drink some water, ya lush. Click the "drink" button and find out how close you are to getting back to your hydrated self.</p>
                         <div className="col-md-12">
-                            <img src={WaterDrop} className="waterDrop" />
+                            <ProgressBar animated now={60} /><br /><br />
+                            {/* <img src={WaterDrop} className="waterDrop" /> */}
+                            <div className="beerSparkle">
+                                <div id='beerWrapper' class="beerWrapper">
+
+                                    <div className="bubble small"></div>
+                                    <div className="bubble s-medium"></div>
+                                    <div className="bubble large"></div>
+                                    <div className="bubble small-l"></div>
+                                    <img src={BeerGlass} />
+                                </div>
+
+                            </div>
                             <div style={{ color: 'black' }}>{this.state.weight}</div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <button className="btn-secondary" type="submit">drink!</button>
+                                    <button className="btn-secondary" type="submit">drink water!</button>
                                 </div>
                             </div>
                         </div>
