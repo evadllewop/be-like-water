@@ -28,7 +28,9 @@ class Drink extends Component {
 
 
     componentDidMount() {
-        const id = this.props.match.params.id;
+        let id = this.props.match.params.id;
+        // const id = "id=1242345"
+        id.replace('?id=', '')
         axios.get(`/api/water/${id}`)
             .then((res) => {
                 this.setState(res.data);
