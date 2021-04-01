@@ -66,7 +66,7 @@ class Drink extends Component {
                                 </div>
 
                             </div>
-                            <div style={{ color: 'black' }}>{this.state.weight} oz.</div>
+                            <div style={{ color: 'black' }}>{this.state.goal} glasses of water</div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <button className="btn-secondary" onClick={() => { this.setState({ current: this.state.current + 10 }) }}>drink some water!</button>
