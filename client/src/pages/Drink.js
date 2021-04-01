@@ -9,8 +9,8 @@ import Header from "../components/layout/Header";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import './sparkle.css';
 import axios from 'axios';
-// import BeerGlass from '../images/glass-of-beer.png';
-import WaterGlass from '../images/glass-of-water.png';
+import BeerGlass from '../images/glass-of-beer.png';
+// import WaterGlass from '../images/glass-of-water.png';
 
 class Drink extends Component {
     onLogoutClick = e => {
@@ -61,11 +61,12 @@ class Drink extends Component {
                                     <div className="bubble s-medium"></div>
                                     <div className="bubble large"></div>
                                     <div className="bubble small-l"></div>
-                                    <img src={WaterGlass} alt={WaterGlass} />
+                                    <img src={BeerGlass} alt={BeerGlass} />
+                                    <br /><br />
                                 </div>
 
                             </div>
-                            <div style={{ color: 'black' }}>{this.state.weight}</div>
+                            <div style={{ color: 'black' }}>{this.state.weight} oz.</div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <button className="btn-secondary" onClick={() => { this.setState({ current: this.state.current + 10 }) }}>drink some water!</button>
