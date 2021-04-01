@@ -24,7 +24,7 @@ class Settings extends Component {
     }
 
     render() {
-        const { user } = this.props.auth;
+
         console.log(this.props);
         return (
             <>

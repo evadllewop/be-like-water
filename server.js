@@ -30,7 +30,7 @@ const db = require("./config/keys").mongoURI;
 //   .catch(err => console.log(err));
 
 mongoose.connect(
-  process.env.MONGODB_URI,//|| 'mongodb://localhost/waterchamps',
+  process.env.MONGODB_URI, //|| 'mongodb://localhost/waterchamps',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -42,10 +42,6 @@ mongoose.connect(
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
-
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 
 // Passport middleware
@@ -59,5 +55,16 @@ app.use("/api/users", users);
 app.use("/api/water", water);
 
 const port = process.env.PORT || 5000;
+
+
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend/build"));
+  app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
+
+
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
