@@ -17,11 +17,15 @@ class Drink extends Component {
         this.props.logoutUser();
     };
 
-    state = {};
+    state = {
+
+        current: 0
+    };
 
     // /api/water/hasan
     // /api/water/dave
     // /api/water/6547373
+
 
     componentDidMount() {
         const id = this.props.match.params.id;
@@ -30,8 +34,6 @@ class Drink extends Component {
                 this.setState(res.data);
 
             })
-
-
     }
 
     render() {
@@ -41,9 +43,13 @@ class Drink extends Component {
                 <Header />
                 <div className="loginContainer">
                     <div className="row" align="center">
-                        <p align="center">Apparently, you're so drunk that you need to be reminded to drink some water, ya lush. Click the "drink" button and find out how close you are to getting back to your hydrated self.</p>
+                        <p align="center">Apparently, you're so drunk that you need to be reminded to drink some water, ya lush.
+                        Click the "drink" button and find out how close you are to getting back to your hydrated self.</p>
+
+                        <div style={{ fontWeight: 'bold' }}>You entered {`${this.state.goal}`} beers. This means that for a {`${this.state.gender}`} at {`${this.state.weight}`} lbs, you will need to drink blah blah.
+                        <br /><br /></div>
                         <div className="col-md-12">
-                            <ProgressBar animated now={60} /><br /><br />
+                            <ProgressBar animated now={this.state.current} label={`${this.state.current}%`} /><br />
                             {/* <img src={WaterDrop} className="waterDrop" /> */}
                             <div className="beerSparkle">
                                 <div id='beerWrapper' class="beerWrapper">
@@ -54,12 +60,11 @@ class Drink extends Component {
                                     <div className="bubble small-l"></div>
                                     <img src={BeerGlass} />
                                 </div>
-
                             </div>
-                            <div style={{ color: 'black' }}>{this.state.weight}</div>
+                            {/* <div style={{ color: 'black' }}>{this.state.weight}</div> */}
                             <div className="row">
                                 <div className="col-md-12">
-                                    <button className="btn-secondary" type="submit">drink water!</button>
+                                    <button className="btn-secondary" onClick={() => { this.setState({ current: this.state.current + 10 }) }}>drink some water!</button>
                                 </div>
                             </div>
                         </div>
@@ -83,12 +88,6 @@ class Drink extends Component {
                             logout
               </button></div>
                 </div>
-                {/* <section>
-                    <div class="wave wave1"></div>
-                    <div class="wave wave2"></div>
-                    <div class="wave wave3"></div>
-                    <div class="wave wave4"></div>
-                </section> */}
             </>
 
         )

@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-
+require('dotenv').config();
 
 const users = require("./routes/api/users");
 const water = require("./routes/api/water");
@@ -30,7 +30,7 @@ const db = require("./config/keys").mongoURI;
 //   .catch(err => console.log(err));
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/waterchamps',
+  process.env.MONGODB_URI,//|| 'mongodb://localhost/waterchamps',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

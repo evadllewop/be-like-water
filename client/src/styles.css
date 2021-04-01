@@ -210,7 +210,7 @@ body {
   .btn-primary:hover {
     background-color: white;
     color: #FF9400;
-    border: 1px solid #FF9400;
+    /* border: 1px solid #FF9400; */
   }
 
   .btn-secondary {
