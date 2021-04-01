@@ -23,7 +23,7 @@ router.post("/", passport.authenticate("jwt", { session: false }), (req, res) =>
         .then(water => res.json(water))
 });
 
-router.get("/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
+router.get("/:id", (req, res) => {
     const id = req.params.id;
     Water.findById(id)
         .then(water => res.json(water))
