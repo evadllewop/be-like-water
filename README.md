@@ -1,42 +1,61 @@
-# mern-auth
 
-![Final App](https://i.postimg.cc/tybZb8dL/final-MERNAuth.gif)
-Minimal full-stack MERN app with authentication using passport and JWTs.
+# beer likes water
 
-This project uses the following technologies:
+## Description
+An app that facilitates a responsible drinking experience by reminding you to stay properly hydrated while consuming alcohol.
 
-- [React](https://reactjs.org) and [React Router](https://reacttraining.com/react-router/) for frontend
-- [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend
-- [MongoDB](https://www.mongodb.com/) for the database
-- [Redux](https://redux.js.org/basics/usagewithreact) for state management between React components
+## Requirements
+  * Must use ReactJS in some way (even if minimal)
+  * Must use a Node and Express Web Server
+  * Must be backed by a MySQL or MongoDB Database with a Sequelize or Mongoose ORM  
+  * Must have both GET and POST routes for retrieving and adding new data
+  * Must be deployed using Heroku (with Data)
+  * Must utilize at least two libraries, packages, or technologies that we haven’t discussed
+  * Must allow for or involve the authentication of users in some way
+  * Must have a polished frontend/UI 
+  * Must have folder structure that meets MVC Paradigm
+  * Must meet good quality coding standards (indentation, scoping, naming)
+  * Must not expose sensitive API key information on the server
 
-## Medium Series
 
-- [Build a Login/Auth App with the MERN Stack — Part 1 (Backend)](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669)
-- [Build a Login/Auth App with the MERN Stack — Part 2 (Frontend & Redux Setup)](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-2-frontend-6eac4e38ee82)
-- [Build a Login/Auth App with the MERN Stack — Part 3 (Linking Redux with React Components)](https://blog.bitsrc.io/build-a-login-auth-app-with-the-mern-stack-part-3-react-components-88190f8db718)
+  ## Table of Contents
+  * [Screenshot](#screenshot)
+  * [Technologies](#technologies)
+  * [Project URLs](#urls)
+  * [Author](#author)
 
-## Configuration
 
-Make sure to add your own `MONGOURI` from your [mLab](http://mlab.com) database in `config/keys.js`.
+  ## Screenshot
+  ![beer likes water screenshot](./client/src/images/blw-screenshot.png)
 
-```javascript
-module.exports = {
-  mongoURI: "YOUR_MONGO_URI_HERE",
-  secretOrKey: "secret"
-};
-```
 
-## Quick Start
+   ## Technologies
+  * HTML
+  * CSS
+  * Bootstrap
+  * React
+  * React-Bootstrap
+  * Javascript
+  * Heroku
+  * MongoDB
+  * Mongoose
+  * Axios
+  * Passport
+  * Express
 
-```javascript
-// Install dependencies for server & client
-npm install && npm run client-install
 
-// Run client & server with concurrently
-npm run dev
+  ## URLs
+  * Deployed App:
+    https://polar-beach-07296.herokuapp.com/
 
-// Server runs on http://localhost:5000 and client on http://localhost:3000
-```
+  * Github Repo:
+    https://github.com/evadllewop/be-like-water
+ 
 
-For deploying to Heroku, please refer to [this](https://www.youtube.com/watch?v=71wSzpLyW9k) helpful video by TraversyMedia.
+  ## Author
+
+  Dave Powell
+
+  * [Github Profile](https://github.com/evadllewop)
+
+
