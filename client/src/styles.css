@@ -1,247 +1,242 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #0034CC;
-    font-family: 'Montserrat', sans-serif;
-    /* color: white; */
-    font-size: 14px;
-    /* min-height: 20vh; */
-    /* min-height: -webkit-fill-available; */
-  }
+  padding: 0;
+  margin: 0;
+  background-color: #0034cc;
+  font-family: "Montserrat", sans-serif;
+  /* color: white; */
+  font-size: 14px;
+  /* min-height: 20vh; */
+  /* min-height: -webkit-fill-available; */
+}
 
-  html {
-    height: -webkit-fill-available;
-  }
-  /* * {
+html {
+  height: -webkit-fill-available;
+}
+/* * {
     box-sizing: border-box;
   } */
 
-  input, .form-select {
-      margin-bottom: 10px;
-      height: 50px;
-  }
-  section {
-    /* position: relative; */
-    width: 100%;
-    height: 20vh;
-    overflow: hidden;
-  }
+input,
+.form-select {
+  margin-bottom: 10px;
+  height: 50px;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+}
 
-  section .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(./images/wave.png);
-    background-size: 1000px 100px;
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./images/wave.png);
+  background-size: 1000px 100px;
+}
+section .wave.wave1 {
+  animation: animate 10s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15;
+}
+section .wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+    /* background-position-y: -200; */
   }
-  section .wave.wave1 {
+  100% {
+    background-position-x: 1000px;
+    /* background-position-y: 100px; */
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
 
-    animation: animate 10s linear infinite;
-    z-index: 1000;
-    opacity: 1;
-    animation-delay: 0s;
-    bottom: 0;
-  }
-  section .wave.wave2 {
+.wrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 
-    animation: animate2 15s linear infinite;
-    z-index: 999;
-    opacity: 0.5;
-    animation-delay: -5s;
-    bottom: 10px;
-  }
-  section .wave.wave3 {
-
-    animation: animate 30s linear infinite;
-    z-index: 998;
-    opacity: 0.2;
-    animation-delay: -2s;
-    bottom: 15;
-  }
-  section .wave.wave4 {
-
-    animation: animate2 5s linear infinite;
-    z-index: 997;
-    opacity: 0.7;
-    animation-delay: -5s;
-    bottom: 20px;
-  }
-  @keyframes animate {
-
-    0%
-    {
-      background-position-x: 0;
-      /* background-position-y: -200; */
-    }
-    100%
-    {
-      background-position-x: 1000px;
-      /* background-position-y: 100px; */
-    }
-  }
-  @keyframes animate2 {
-
-    0%
-    {
-      background-position-x: 0;
-    }
-    100%
-    {
-      background-position-x: -1000px;
-    }
-  }
-
-  .wrapper {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height:100%; 
-  }
-
-  .genderIcon {
-    height: 70px;
-    width: 70px;
-    margin: 10px;
-  }
+.genderIcon {
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+}
 
 .divCenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-}  
+}
 
 .h2MainHeader {
   margin-bottom: 20px;
-  font-family: 'Akaya Kanadaka', cursive;
+  font-family: "Akaya Kanadaka", cursive;
   font-size: 30px;
-  }
-
-.settingsHeader {
-    background-color:#E5E9FA;
-    height: 50px;
-    color: #0034CC;
-    font-family: 'Akaya Kanadaka', cursive;
-    font-size: 22px;
-    text-align: center;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 10px;
-  }
-
-.navbar {
-      padding: 0;
-      margin-top: 0;
-      background-color: #0034CC;
-      align-items: center;
-  }
-.txtWrapper {
-    margin: auto;
-    width: 400px;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-
-.wave {
-    padding: 0;
-    margin-top: 0;
-      margin-right: 0;
-      width: 100%;
-      /* height: 80; */
-  }
-
-  .waterDrop {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .logoLg , .logoSm{
-      /* margin-bottom: 20px; */
-      color:white;
-      font-family: 'Akaya Kanadaka', cursive;
-      font-size: 60px;
-      text-align: center;
-      margin-bottom: 10px;
-  }
-
-  .logoSm {
-    /* position: relative; */
-    /* margin-top: 40px; */
-    color: deepskyblue;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 2em;
-    text-align: center;
-    width: auto;
-    white-space: nowrap;
-    float: right;
 }
 
-  .loginContainer {
-    padding: 40px;
-    width: 400px;
-    height: auto;
-    background-color: white;
-    margin: auto;
-    box-shadow: 0 0px 20px -6px rgb(190, 190, 190);
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
+.settingsHeader {
+  background-color: #e5e9fa;
+  height: 50px;
+  color: #0034cc;
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 22px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
 
-  .btn-primary, .btn-secondary, .fixed-button, .btn-logout {
-    font-family: 'Akaya Kanadaka', cursive;
-    font-size: 24px;
-    border:none;
-    width: 100%;
-    background-color:#FF9400 ;
-    border-radius:8px;
-    padding-top: 8px;
-    padding-right: 30px;
-    padding-bottom: 8px;
-    padding-left: 30px;
-    margin-top: 14px;
-  }
+.navbar {
+  padding: 0;
+  margin-top: 0;
+  background-color: #0034cc;
+  align-items: center;
+}
+.txtWrapper {
+  margin: auto;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
 
-  .btn-primary:hover {
-    background-color: white;
-    color: #FF9400;
-    /* border: 1px solid #FF9400; */
-  }
+.wave {
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0;
+  height: 100%;
+  /* height: 80; */
+}
 
-  .btn-secondary {
-    border:1px solid blue;
-    color: #0034CC;
-    background-color:white ;
-  }
+.waterDrop {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
-  .btn-secondary:hover {
-    background-color: blue;
-    color: white;
-  }
-  .btn-logout {
-    padding: 0;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #0034CC;
-    color: white;
-    margin: 0;
-  }
+.logoLg,
+.logoSm {
+  /* margin-bottom: 20px; */
+  color: white;
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  .fixed-button{ 
-    width: 400px;
-    padding-top: 8px;
-    margin-bottom: 30px;
-    /* position: fixed;  */
-    bottom: 0; 
-    left: 0px;
-    }
-    .fixed-header{ 
-      position: fixed; 
-      top: 0; 
-      right: 0px;
-      }
+.logoSm {
+  /* position: relative; */
+  /* margin-top: 40px; */
+  color: deepskyblue;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2em;
+  text-align: center;
+  width: auto;
+  white-space: nowrap;
+  float: right;
+}
+
+.loginContainer {
+  padding: 40px;
+  width: 400px;
+  height: auto;
+  background-color: white;
+  margin: auto;
+  box-shadow: 0 0px 20px -6px rgb(190, 190, 190);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary,
+.fixed-button,
+.btn-logout {
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 24px;
+  border: none;
+  width: 100%;
+  background-color: #ff9400;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-right: 30px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+  margin-top: 14px;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #ff9400;
+  /* border: 1px solid #FF9400; */
+}
+
+.btn-secondary {
+  border: 1px solid blue;
+  color: #0034cc;
+  background-color: white;
+}
+
+.btn-secondary:hover {
+  background-color: blue;
+  color: white;
+}
+.btn-logout {
+  padding: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0034cc;
+  color: white;
+  margin: 0;
+}
+
+.fixed-button {
+  width: 400px;
+  padding-top: 8px;
+  margin-bottom: 30px;
+  /* position: fixed;  */
+  bottom: 0;
+  left: 0px;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  right: 0px;
+}
